@@ -38,10 +38,29 @@ function isTwo(num) {
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+function calculateTip(tipAmount, billAmount){
+    return tipAmount * billAmount
+}
 
+/**
+ * TODO:
+ * Create a function named `applyDiscount`. This function should accept a price
+ * (before a discount is applied), and a discount percentage (a number between 0
+ * and 1). It should return the result of applying the discount to the original
+ * price.
+ *
+ * Example:
+ * > var originalPrice = 100;
+ * > var dicountPercent = .2; // 20%
+ * > applyDiscount(originalPrice, dicountPercent) // 80
+ *
+ * > applyDiscount(45.99, 0.12) // 40.4712
+ */
+function applyDiscount(price, percentage) {
+    return price - (price * percentage)
+}
 
-//  This line allows us to use our custom 'sayHello' function outside of the functions.js file.
+//  This line allows us to use our custom functions outside of the functions.js file.
 //  Again, this is okay if you are still not familiar on what this is doing or why we need this.
-
 //  Add your function names within the {}
-module.exports = {sayHello, isTwo};
+module.exports = {sayHello, isTwo, calculateTip, applyDiscount};

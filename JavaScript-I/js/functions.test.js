@@ -1,5 +1,5 @@
 // Line 2 is used so we can reference the functions in functions.js
-var {sayHello, isTwo} = require('./functions')
+var {sayHello, isTwo, calculateTip, applyDiscount} = require('./functions')
 /**
  * TODO:
  * Create a test for the function 'sayHello' and pass "codeup" as a string literal argument.
@@ -12,11 +12,13 @@ test("Say hello Codeup", function() {
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to a second test using the 'sayHello' function.
+ * * Example
+ * > sayHello("James") // returns "Hello, James"
  */
 test("Say hello Jason", function() {
     var myName = "Jason";
     expect(sayHello(myName)).toBe("Hello, Jason");
-})
+});
 
 /**
  * TODO:
@@ -46,30 +48,27 @@ test("string '2' is not integer 2", function() {
 
 /**
  * TODO:
- * Create a function named 'calculateTip' to calculate a tip on a bill at a
- * restaurant. The function should accept a tip percentage and the total of the
- * bill, and return the amount to tip
- *
+ * Create 3 tests for the function 'calculateTip'.
  * Examples:
  * > calculateTip(0.20, 20) // returns 4
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+test("tip should be 4", function() {
+    expect(calculateTip(0.20, 20)).toBeCloseTo(4);
+});
+
+test("tip should be 6.37", function() {
+    expect(calculateTip(0.25, 25.50)).toBeCloseTo(6.37);
+});
+
+test("tip should be 5.01", function() {
+    expect(calculateTip(0.15, 33.42)).toBeCloseTo(5.01);
+});
 
 /**
  * TODO:
- * Use prompt and alert in combination with your calculateTip function to
- * prompt the user for the bill total and a percentage they would like to tip,
- * then display the dollar amount they should tip
- */
-
-/**
- * TODO:
- * Create a function named `applyDiscount`. This function should accept a price
- * (before a discount is applied), and a discount percentage (a number between 0
- * and 1). It should return the result of applying the discount to the original
- * price.
- *
+ * Create 3 tests for the function `applyDiscount`.
  * Example:
  * > var originalPrice = 100;
  * > var dicountPercent = .2; // 20%
@@ -77,3 +76,10 @@ test("string '2' is not integer 2", function() {
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+test("Discounted price should be 40.47", function() {
+    expect(applyDiscount(45.99, 0.12)).toBeCloseTo(40.47);
+});
+
+test("Discounted price should be 9.89", function() {
+    expect(applyDiscount(10.99, 0.1)).toBeCloseTo(9.89);
+});
