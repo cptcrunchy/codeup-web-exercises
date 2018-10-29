@@ -9,5 +9,8 @@
   "private": true,
   "devDependencies": {
     "jest": "^23.6.0"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
