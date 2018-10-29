@@ -50,4 +50,3 @@ dot notation. In our example we use `.toBe("Expected Output")`
 
 the string "Expected Output" can be a string, array, object, integer or boolean value. For other
 examples on using Matchers reference the Jest docs: [HERE](https://jestjs.io/docs/en/using-matchers)
-

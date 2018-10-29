@@ -1,5 +1,5 @@
-// Line 2 is used so we can reference the function in functions.js
-var sayHello = require('./functions')
+// Line 2 is used so we can reference the functions in functions.js
+var {sayHello, isTwo} = require('./functions')
 /**
  * TODO:
  * Create a test for the function 'sayHello' and pass "codeup" as a string literal argument.
@@ -18,22 +18,31 @@ test("Say hello Jason", function() {
     expect(sayHello(myName)).toBe("Hello, Jason");
 })
 
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
-
 /**
  * TODO:
- * Create a test for the 'isTwo' function that takes a number as a parameter.
+ * Create 3 tests for the 'isTwo' function that takes a number as a parameter.
  * The function should return a boolean value based on whether or not the passed
  * number is the number 2.
- 
- * Call the function 'isTwo' passing the variable 'random' as a argument.
- *
- * console.log *outside of the function* to check your work (you should see a
- * different result everytime you refresh the page if you are using the random
- * number)
+ * * Example
+ * > isTwo(1) // returns false
+ * > isTwo(2) // returns true
+ * > isTwo(3) // returns false
  */
+test("one is not two", function() {
+    expect(isTwo(1)).toBe(false);
+});
+
+test("two is two", function() {
+    expect(isTwo(2)).toBe(true);
+});
+
+test("three is not two", function() {
+    expect(isTwo(3)).toBe(false);
+});
+
+test("string '2' is not integer 2", function() {
+    expect(isTwo("2")).toBe(false);
+});
 
 /**
  * TODO:
