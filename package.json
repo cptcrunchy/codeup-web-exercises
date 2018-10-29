@@ -1,0 +1,13 @@
+{
+  "name": "codeup-web-exercises",
+  "version": "1.0.0",
+  "description": "Codedup web exercises but with introduction of Unit Testing",
+  "main": "index.js",
+  "repository": "https://github.com/cptcrunchy/codeup-web-exercises.git",
+  "author": "Jason Gutierrez <jasong84@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
